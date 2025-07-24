@@ -1,11 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/Header";
+import { FileExplorer } from "@/components/FileExplorer";
+import { CodeEditor } from "@/components/CodeEditor";
+import { Preview } from "@/components/Preview";
+import { AIChat } from "@/components/AIChat";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="h-screen flex flex-col bg-background">
+      <Header />
+      <div className="flex-1 flex overflow-hidden">
+        <FileExplorer />
+        <div className="flex-1 flex">
+          <CodeEditor />
+          <Preview />
+        </div>
+        <AIChat />
       </div>
     </div>
   );
